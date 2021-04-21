@@ -5,6 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- font icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.min.css">
     <link rel="stylesheet" href="./style.css" />
     <title>Weather Dashboard</title>
 </head>
@@ -12,65 +16,93 @@
 <body>
     <h1>Weather Dashboard</h1>
 
-    <!-- SEARCH FORM -->
-    <div class="search-form"></div>
-    <h2>Search for a City: </h2>
-    <textarea>CITY</textarea>
-    <button class="search-btn">Search</button>
+    <main class="flex-row justify-space-between">
+        <!-- SEARCH FORM -->
+        <div class="col-12 col-md-4">
+            <div class="search-form card">
+                <h3 class="card-header">Search for a City: </h3>
+                <form>
+                    <input id="city" class="form-input" />
+                    <button type="submit" class="search-btn">Search</button>
+                </form>
 
-    <!-- SEARCH HISTORY -->
-    <div class="search-history"></div>
+            </div>
 
-    <!-- CURRENT WEATHER -->
-    <div class="current-weather"></div>
-    <h3 class="current-city">Atlanta / Date / Icon </h3>
-    <ul class="current-details"></ul>
-    <li>Temp:</li>
-    <li>Wind:</li>
-    <li>Humidity:</li>
-    <li>UV Index:</li>
+            <!-- SEARCH HISTORY -->
+            <div class="search-history"></div>
+        </div>
 
-    <!-- Five Day Forecast -->
-    <div class="forecast">5-Day Forecast</div>
-    <!-- card one -->
-    <ul class="forecast-details"></ul>
-    <li>Date</li>
-    <li>Icon</li>
-    <li>Temp:</li>
-    <li>Wind:</li>
-    <li>Humidity:</li>
+        <!-- CURRENT WEATHER -->
+        <div class="col-12 col-md-8 current-weather">
+            <div class="current-city card">
+                <h3 class="card-header">Atlanta / Date / Icon </h3>
+                <ul class="current-details card-body"></ul>
+                <li>Temp:</li>
+                <li>Wind:</li>
+                <li>Humidity:</li>
+                <li>UV Index:</li>
+            </div>
 
-    <!-- card two -->
-    <ul class="forecast-details"></ul>
-    <li>Date</li>
-    <li>Icon</li>
-    <li>Temp:</li>
-    <li>Wind:</li>
-    <li>Humidity:</li>
+            <!-- Five Day Forecast -->
+            <div class="card-deck" id="forecast">
+                <h3 class="card-header"> 5-Day Forecast</h3>
+                <!-- card one -->
+                <div class="card">
+                    <div class="card-title">Date / Icon </div>
+                    <ul class="card-body forecast-details">
+                        <!-- <li>Date / Icon </li> -->
+                        <li>Temp:</li>
+                        <li>Wind:</li>
+                        <li>Humidity:</li>
+                    </ul>
+                </div>
+                <!-- card two -->
+                <div class="card">
+                    <div class="card-title">Date / Icon </div>
+                    <ul class="card-body forecast-details">
+                        <!-- <li>Date / Icon </li> -->
+                        <li>Temp:</li>
+                        <li>Wind:</li>
+                        <li>Humidity:</li>
+                    </ul>
+                </div>
 
-    <!-- card three -->
-    <ul class="forecast-details"></ul>
-    <li>Date</li>
-    <li>Icon</li>
-    <li>Temp:</li>
-    <li>Wind:</li>
-    <li>Humidity:</li>
+                <!-- card three -->
+                <div class="card">
+                    <div class="card-title">Date / Icon </div>
+                    <ul class="card-body forecast-details">
+                        <!-- <li>Date / Icon </li> -->
+                        <li>Temp:</li>
+                        <li>Wind:</li>
+                        <li>Humidity:</li>
+                    </ul>
+                </div>
 
-    <!-- card four -->
-    <ul class="forecast-details"></ul>
-    <li>Date</li>
-    <li>Icon</li>
-    <li>Temp:</li>
-    <li>Wind:</li>
-    <li>Humidity:</li>
+                <!-- card four -->
+                <div class="card">
+                    <div class="card-title">Date / Icon </div>
+                    <ul class="card-body forecast-details">
+                        <!-- <li>Date / Icon </li> -->
+                        <li>Temp:</li>
+                        <li>Wind:</li>
+                        <li>Humidity:</li>
+                    </ul>
+                </div>
 
-    <!-- card five -->
-    <ul class="forecast-details"></ul>
-    <li>Date</li>
-    <li>Icon</li>
-    <li>Temp:</li>
-    <li>Wind:</li>
-    <li>Humidity:</li>
+                <!-- card five -->
+                <div class="card">
+                    <div class="card-title">Date / Icon </div>
+                    <ul class="card-body forecast-details">
+                        <!-- <li>Date / Icon </li> -->
+                        <li>Temp:</li>
+                        <li>Wind:</li>
+                        <li>Humidity:</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
 </body>
 
 </html>

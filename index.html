@@ -13,19 +13,18 @@
     <title>Weather Dashboard</title>
 </head>
 
-<body>
+<body class="container">
     <h1>Weather Dashboard</h1>
 
-    <main class="flex-row justify-space-between">
+    <main class="flex-row justify-space-between row">
         <!-- SEARCH FORM -->
         <div class="col-12 col-md-4">
             <div class="search-form card">
                 <h3 class="card-header">Search for a City: </h3>
-                <form>
+                <form id="city-form">
                     <input id="city" class="form-input" />
                     <button type="submit" class="search-btn">Search</button>
                 </form>
-
             </div>
 
             <!-- SEARCH HISTORY -->
@@ -44,8 +43,8 @@
             </div>
 
             <!-- Five Day Forecast -->
+            <h3 class="card-header"> 5-Day Forecast</h3>
             <div class="card-deck" id="forecast">
-                <h3 class="card-header"> 5-Day Forecast</h3>
                 <!-- card one -->
                 <div class="card">
                     <div class="card-title">Date / Icon </div>

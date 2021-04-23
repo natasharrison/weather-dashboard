@@ -20,6 +20,12 @@ h1 {
 li {
   list-style-type: none;
 }
+
+.day {
+  color: whitesmoke;
+  background-color: #009d82;
+  font-weight: bold;
+}
 /* FLEX CONTENT */
 /* .flex-row {
   display: flex;

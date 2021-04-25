@@ -9,6 +9,7 @@ var getWeather = function (city) {
 })
         .then(function(data){
             console.log(data);
+            // displayWeather()
         }) 
 };
 
@@ -28,7 +29,10 @@ var formSubmitHandler = function(event){
 };
 
 // display current weather 
-// var displayWeather = function()
+// var displayWeather = function(weather, searchTerm) {
+//     console.log(weather);
+//     console.log(searchTerm);
+// };
 
 
 formEl.addEventListener("submit", formSubmitHandler);

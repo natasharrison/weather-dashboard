@@ -5,7 +5,7 @@ var currentCityEl = document.querySelector("#current-city");
 // api fetch for current weather
 var getCurrentWeather = function (city) {
     fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&appid=65c9a13b026d55f0a4cc05734545fc57`).then(function(response) {
-        console.log(response);
+        // console.log(response);
         return response.json()
 })
         .then(function(data){
@@ -33,8 +33,10 @@ var formSubmitHandler = function(event){
 // display current weather 
 var displayCurrentWeather = function(data){
     currentCityEl.textContent = data.name;
+    var currentDate = data.dt
+    currentDate = moment().format("MM/DD/YY");
 
-    document.getElementById("date").innerHTML = data.dt;
+    document.getElementById("date").innerHTML = currentDate;
     document.getElementById("icon").innerHTML = data.weather[0].icon;
     document.getElementById("temp").innerHTML = data.main.temp;
     document.getElementById("wind").innerHTML = data.wind.speed;
@@ -46,7 +48,7 @@ var displayCurrentWeather = function(data){
 var getForecastWeather = function (city) {
     fetch(`http://api.openweathermap.org/data/2.5/forecast?q=${city}&cnt=5&units=imperial&appid=65c9a13b026d55f0a4cc05734545fc57`)
     .then(function(response) {
-        console.log(response);
+        // console.log(response);
         return response.json()
 })
         .then(function(data){
@@ -57,12 +59,27 @@ var getForecastWeather = function (city) {
 
 // display Forecast 
 var displayForecast = function(data){
+    var forecastDateOne= data.list[0].dt
+    forecastDateOne = moment().format("MM/DD/YY");
+
+    var forecastDateTwo= data.list[1].dt
+    forecastDateTwo = moment().format("MM/DD/YY");
+
+    var forecastDateThree= data.list[2].dt
+    forecastDateThree = moment().format("MM/DD/YY");
+
+    var forecastDateFour= data.list[3].dt
+    forecastDateFour = moment().format("MM/DD/YY");
+
+    var forecastDateFive= data.list[4].dt
+    forecastDateFive = moment().format("MM/DD/YY");
+
     // forecast dates
-    document.getElementById("day-one").innerHTML = data.list[0].dt
-    document.getElementById("day-two").innerHTML = data.list[1].dt
-    document.getElementById("day-three").innerHTML = data.list[2].dt
-    document.getElementById("day-four").innerHTML = data.list[3].dt
-    document.getElementById("day-five").innerHTML = data.list[4].dt
+    document.getElementById("day-one").innerHTML = forecastDateOne
+    document.getElementById("day-two").innerHTML = forecastDateTwo
+    document.getElementById("day-three").innerHTML = forecastDateThree
+    document.getElementById("day-four").innerHTML = forecastDateFour
+    document.getElementById("day-five").innerHTML = forecastDateFive
     // forecast icon
     document.getElementById("one-icon").innerHTML = data.list[0].weather
     document.getElementById("two-icon").innerHTML = data.list[1].weather
@@ -90,9 +107,23 @@ var displayForecast = function(data){
 
 };
 
-// get the image from the website by creating image variable
-// var imageEl = 
-// Image = "src" "http://"
+// local storage
+var saveCitySearch = function(){
+    localStorage.setItem("city", JSON.stringify(city));
+};
 
+// display local storage 
+var loadCitySearch = function(){
+    city = JSON.parse(localStorage.getItem("city"))
+};
 
+saveCitySearch();
+loadCitySearch();
 formEl.addEventListener("submit", formSubmitHandler);
+
+// REMAINING ISSUES
+// get the icon image from the website by creating image variable
+// find uv index and display on the page with color coding based on conditions
+// display local storage 
+// create buttons for stored search cities
+// refactor

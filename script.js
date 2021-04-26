@@ -28,6 +28,8 @@ var formSubmitHandler = function(event){
     } else {
         alert("Please enter a city name");
     }
+
+    localStorage.setItem("city", JSON.stringify(city));
 };
 
 // display current weather 
@@ -104,7 +106,6 @@ var displayForecast = function(data){
     document.getElementById("three-humid").innerHTML = data.list[2].main.humidity
     document.getElementById("four-humid").innerHTML = data.list[3].main.humidity
     document.getElementById("five-humid").innerHTML = data.list[4].main.humidity
-
 };
 
 // local storage

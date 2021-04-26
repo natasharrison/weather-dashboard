@@ -12,8 +12,8 @@ This project is a web app that uses OpenWeather One Call API to display the curr
 
 ## Website
 
-[GitHub] ()
-[Screenshot]
+[GitHub] (https://natasharrison.github.io/weather-dashboard/)
+[Screenshot] <img src = "images/screenshot.JPG">
 
 ## Contribution
 

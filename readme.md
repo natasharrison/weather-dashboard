@@ -18,3 +18,11 @@ This project is a web app that uses OpenWeather One Call API to display the curr
 ## Contribution
 
 - Created by Natasha Harrison
+
+## Remaining Issues
+
+- get the icon image from the website by creating image variable
+- find uv index and display on the page with color coding based on conditions
+- display local storage 
+- create buttons for stored search cities
+- refactor

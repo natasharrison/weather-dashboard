@@ -34,74 +34,65 @@
         <!-- CURRENT WEATHER -->
         <div class="col-12 col-md-8 current-weather">
             <div class="current-city card">
-                <h3 class="card-header"><span id="current-city"></span></h3>
-                <ul class="current-details card-body"></ul>
-                <li><span id="icon"></span></li>
-                <li>Temp: <span id="temp"></span>°F</li>
-                <li>Wind: <span id="wind"></span> MPH</li>
-                <li>Humidity: <span id="humidity"></span>%</li>
+                <h3 class="card-header">Current Weather: <span id="current-city"></span></h3>
+                <p><span id="icon"></span></p>
+                <p>Temp: <span id="temp"></span>°F</p>
+                <p>Wind: <span id="wind"></span> MPH</p>
+                <p>Humidity: <span id="humidity"></span>%</p>
             </div>
 
-            <!-- Five Day Forecast -->
+            <!-- FIVE DAY FORECAST -->
             <h4 class="card-header"> 5-Day Forecast:</h4>
             <div class="card-deck" id="forecast">
+
                 <!-- card one -->
                 <div class="day card">
-                    <div class="card-title">Date / Icon </div>
-                    <ul class="card-body forecast-details">
-                        <!-- <li>Date / Icon </li> -->
-                        <li>Temp:</li>
-                        <li>Wind:</li>
-                        <li>Humidity:</li>
-                    </ul>
+                    <div class="card-title"><span id="day-one"></span></div>
+                    <p><span id="one-icon"></span></p>
+                    <p>Temp: <span id="one-temp"></span>°F</p>
+                    <p>Wind: <span id="one-wind"></span>MPH</p>
+                    <p>Humidity: <span id="one-humidity"></span>%</p>
                 </div>
+
                 <!-- card two -->
                 <div class="day card">
-                    <div class="card-title">Date / Icon </div>
-                    <ul class="card-body forecast-details">
-                        <!-- <li>Date / Icon </li> -->
-                        <li>Temp:</li>
-                        <li>Wind:</li>
-                        <li>Humidity:</li>
-                    </ul>
+                    <div class="card-title"><span id="day-two"></span></div>
+                    <p><span id="two-icon"></span></p>
+                    <p>Temp: <span id="two-temp"></span>°F</p>
+                    <p>Wind: <span id="two-wind"></span>MPH</p>
+                    <p>Humidity: <span id="two-humidity"></span>%</p>
                 </div>
 
                 <!-- card three -->
                 <div class="day card">
-                    <div class="card-title">Date / Icon </div>
-                    <ul class="card-body forecast-details">
-                        <!-- <li>Date / Icon </li> -->
-                        <li>Temp:</li>
-                        <li>Wind:</li>
-                        <li>Humidity:</li>
-                    </ul>
+                    <div class="card-title"><span id="day-three"></span></div>
+                    <p><span id="three-icon"></span></p>
+                    <p>Temp: <span id="three-temp"></span>°F</p>
+                    <p>Wind: <span id="three-wind"></span>MPH</p>
+                    <p>Humidity: <span id="three-humidity"></span>%</p>
                 </div>
 
                 <!-- card four -->
                 <div class="day card">
-                    <div class="card-title">Date / Icon </div>
-                    <ul class="card-body forecast-details">
-                        <!-- <li>Date / Icon </li> -->
-                        <li>Temp:</li>
-                        <li>Wind:</li>
-                        <li>Humidity:</li>
-                    </ul>
+                    <div class="card-title"><span id="day-four"></span></div>
+                    <p><span id="four-icon"></span></p>
+                    <p>Temp: <span id="four-temp"></span>°F</p>
+                    <p>Wind: <span id="four-wind"></span>MPH</p>
+                    <p>Humidity: <span id="four-humidity"></span>%</p>
                 </div>
 
                 <!-- card five -->
                 <div class="day card">
-                    <div class="card-title">Date / Icon </div>
-                    <ul class="card-body forecast-details">
-                        <!-- <li>Date / Icon </li> -->
-                        <li>Temp:</li>
-                        <li>Wind:</li>
-                        <li>Humidity:</li>
-                    </ul>
+                    <div class="card-title"><span id="day-five"></span></div>
+                    <p><span id="five-icon"></span></p>
+                    <p>Temp: <span id="five-temp"></span>°F</p>
+                    <p>Wind: <span id="five-wind"></span>MPH</p>
+                    <p>Humidity: <span id="five-humidity"></span>%</p>
                 </div>
             </div>
         </div>
     </main>
-    <script src="script.js"></script>
+    <script src=" script.js"></script>
 </body>
 
 </html>
@@ -117,5 +108,5 @@ THEN I am presented with a color that indicates whether the conditions are favor
 WHEN I view future weather conditions for that city
 THEN I am presented with a 5-day forecast that displays the date, an icon representation of weather conditions, the
 temperature, the wind speed, and the humidity
-WHEN I click on a city in the search history
+WHEN I cpck on a city in the search history
 THEN I am again presented with current and future conditions for that city -->
